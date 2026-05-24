@@ -1,0 +1,31 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 5228",
+    "build": "next build",
+    "start": "next start -p 5228",
+    "lint": "next lint",
+    "db:check": "node scripts/check-db.mjs",
+    "db:setup": "node scripts/setup-db.mjs",
+    "secrets:generate": "node scripts/generate-secrets.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "next": "15.1.0",
+    "papaparse": "^5.4.1",
+    "pg": "^8.11.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20",
+    "@types/papaparse": "^5.3.14",
+    "@types/pg": "^8.11.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
