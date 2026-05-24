@@ -11,6 +11,9 @@
     "db:setup": "node scripts/setup-db.mjs",
     "secrets:generate": "node scripts/generate-secrets.mjs"
   },
+  "optionalDependencies": {
+    "@next/swc-linux-x64-gnu": "15.1.0"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "next": "15.1.0",

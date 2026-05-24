@@ -43,9 +43,14 @@ export async function GET() {
   } catch (error) {
     const message =
       error instanceof Error ? error.message : "Database connection failed";
-    const hint = message.includes("password authentication failed")
-      ? "Wrong Neon password in backend/.env — copy a fresh connection string from console.neon.tech"
-      : "Check DATABASE_URL in backend/.env";
+    let hint = "Check DATABASE_URL and all env vars in Vercel → Settings → Environment Variables.";
+    if (message.includes("password authentication failed")) {
+      hint =
+        "Wrong Neon password — copy a fresh pooled connection string from console.neon.tech (no channel_binding).";
+    } else if (message.includes("ADMIN_TOKEN") || message.includes("STUDENT_TOKEN")) {
+      hint =
+        "On your PC run: npm run secrets:generate — paste long tokens into Vercel (not admin-secret-token).";
+    }
     return Response.json(
       { status: "error", database: "disconnected", error: message, hint },
       { status: 503 }

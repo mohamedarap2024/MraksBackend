@@ -1,5 +1,6 @@
 const WEAK_TOKENS = new Set([
   "change-me-secure-token",
+  "admin-secret-token",
   "student-secret-token",
   "student-token",
   "dev-only-student-token",
