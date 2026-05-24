@@ -12,11 +12,11 @@
     "secrets:generate": "node scripts/generate-secrets.mjs"
   },
   "optionalDependencies": {
-    "@next/swc-linux-x64-gnu": "15.1.0"
+    "@next/swc-linux-x64-gnu": "15.1.11"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "next": "15.1.0",
+    "next": "15.1.11",
     "papaparse": "^5.4.1",
     "pg": "^8.11.5",
     "react": "^19.0.0",
